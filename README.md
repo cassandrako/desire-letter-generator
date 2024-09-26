@@ -1,4 +1,4 @@
-My Desire Letter Generator is based around the desire to travel abroad.
+**My Desire Letter Generator is based around the desire to travel abroad.**
 
 To use my code, in your terminal run:
 
@@ -6,7 +6,10 @@ python3 love_letter.py -one
 
 (other options to use -one -two -three or -scramble)
 
-Here's an example of what it should look like:
+
+
+
+**Here's an example of what it should look like:**
 
 --------------------------------------------------
 
