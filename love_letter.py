@@ -26,7 +26,7 @@ def generate_combinations():
             for desire in desires:
                 for secret in secrets:
                     for farewell in farewells:
-                        letter = f"{greeting} {location}!\n\n{desire}. Hidden within is {secret}. \n\n{farewell},\nYour wandering soul"
+                        letter = f"{greeting} {location}!\n\n{desire}. Hidden within is {secret}. \n\n{farewell},\nCassandra"
                         combinations.append(letter)
     return combinations
 
@@ -61,7 +61,7 @@ def main():
             print("\n" + "-"*50 + "\n")
     
     else:
-        print("Invalid flag. Please use -one, -two, -three, or -scramble.")
+        print("Invalid syntax. Please use -one, -two, -three, or -scramble.")
 
 if __name__ == "__main__":
     main()
