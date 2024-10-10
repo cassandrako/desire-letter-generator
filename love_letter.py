@@ -9,6 +9,7 @@ desires = ["I wish to stay here forever", "I long for a longer PTO", "I dream of
 secrets = ["tiring", "exhausting", "not wanted", "making me sleepy", "burning me out"]
 farewells = ["Yours truly", "Forever yours", "With love", "Missing you", "Not eager to return"]
 
+# Generate the travel letter with extended text
 def generate_letter():
     greeting = random.choice(greetings)
     location = random.choice(locations)
@@ -16,9 +17,18 @@ def generate_letter():
     secret = random.choice(secrets)
     farewell = random.choice(farewells)
     
-    letter = f"{greeting} {location}!\n\n{desire}. Going to work and school is {secret}. \n\n{farewell},\nCassandra"
+    # Extended letter with more sentences
+    letter = (
+        f"{greeting} {location}!\n\n"
+        f"My life here is so eventful, freeing, every day feels like a dream. {desire}.\n"
+        f"Between exploring new places and trying out local cuisine in both the street markets and restaurants, I've found so much joy here.\n"
+        f"But the thought of returning to daily routines is {secret}. \n"
+        f"I've made so many memories, and I can't wait to share them with you. When will I see you again... if I choose to never return ever again.\n"
+        f"{farewell},\nCassandra"
+    )
     return letter
 
+# Generate all possible combinations of letters
 def generate_combinations():
     combinations = []
     for greeting in greetings:
@@ -26,10 +36,18 @@ def generate_combinations():
             for desire in desires:
                 for secret in secrets:
                     for farewell in farewells:
-                        letter = f"{greeting} {location}!\n\n{desire}. Hidden within is {secret}. \n\n{farewell},\nCassandra"
+                        letter = (
+                            f"{greeting} {location}!\n\n"
+                            f"The scenery here is breathtaking, and every day feels like a dream. {desire}.\n"
+                            f"Between exploring new places and trying out local delicacies, I've found so much joy here.\n"
+                            f"But the thought of returning to daily routines is {secret}. \n"
+                            f"I've made so many memories, and I can't wait to share them with you.\n"
+                            f"{farewell},\nCassandra"
+                        )
                         combinations.append(letter)
     return combinations
 
+# Flag handling for different versions of the letter
 def main():
     if len(sys.argv) < 2:
         print("Please provide a flag such as -one, -two, -scramble.")
